@@ -16,13 +16,27 @@
           <!-- we're using this section to play with background images -->
         </section>
         <section>
-            <!-- this section is for playing with srcset -->
-            <img src="images/puppy-1.0.jpg" alt="A white puppy standing in short grass">
+            <!-- srcset lets you provide multiple images, and the browser will decide which one is the best based on the condition you give,
+             the 2x and 3x is the pixel density 
+             if both srcset images fil, the normal src image will be used-->
+            <img srcset="
+              images/puppy-2.0.jpg 2x,
+              images/puppy-3.0.jpg 3x"
+              src="images/puppy-1.0.jpg" alt="A white puppy standing in short grass">
         </section>
 
         <section class="test2">
           <!-- this section is for playing with sizes-->
+          <img srcset="
+            images/puppy-1.0.jpg 1000w,
+            images/puppy-2.0.jpg 2000w,
+            images/puppy-3.0.jpg 3000w"
 
+            sizes="
+            (min-width:900px) 66.6vw,
+            (min-width:1200px) 33.3vw"
+
+            src="images/puppy-1.0.jpg" alt="A white puppy standing in short grass">
         </section>
 
         <section>
